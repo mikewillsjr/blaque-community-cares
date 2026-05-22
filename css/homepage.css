@@ -35,14 +35,9 @@
   position: absolute;
   inset: 0;
   background: #4A3728;
-  /* Warm-toned placeholder for historical Queens street photo */
-  background: linear-gradient(
-    135deg,
-    #4A3728 0%,
-    #5C4A3A 30%,
-    #3E3020 60%,
-    #4A3728 100%
-  );
+  background-image: url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero__overlay {
@@ -161,6 +156,14 @@
 .mission__photo {
   height: 140px;
   border-radius: 2px;
+  overflow: hidden;
+}
+
+.mission__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ========================================
@@ -185,12 +188,9 @@
   position: absolute;
   inset: 0;
   background: #2A2520;
-  background: linear-gradient(
-    180deg,
-    #2A2520 0%,
-    #3A3228 40%,
-    #2A2520 100%
-  );
+  background-image: url('../assets/images/banner-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .banner-value__banner-text {
@@ -298,6 +298,13 @@
   border-radius: 0;
 }
 
+.community-value__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* ========================================
    4. HISTORICAL / COMMUNITY SECTION
    ======================================== */
@@ -341,6 +348,13 @@
   font-size: 12px;
   color: #6a6058;
   background: #3A3228;
+}
+
+.history__photo-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .history__quote-block {
@@ -664,6 +678,11 @@
     height: 200px !important;
   }
 
+  .history__photo-block img {
+    height: 200px;
+    object-fit: cover;
+  }
+
   .history__quote-block {
     padding: 28px;
   }
@@ -765,6 +784,11 @@
 
   .history__photo-block .img-placeholder {
     height: 160px !important;
+  }
+
+  .history__photo-block img {
+    height: 160px;
+    object-fit: cover;
   }
 
   .history__quote-text {

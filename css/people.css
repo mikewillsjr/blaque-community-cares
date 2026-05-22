@@ -387,12 +387,9 @@
   position: absolute;
   inset: 0;
   background: #2A2520;
-  background: linear-gradient(
-    135deg,
-    #2A2520 0%,
-    #3E3020 40%,
-    #2A2520 100%
-  );
+  background-image: url('../assets/images/quote-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .people-quote__overlay {
