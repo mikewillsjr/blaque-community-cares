@@ -1,0 +1,798 @@
+/* ============================================
+   BlaQue Community Cares — About Page
+   ============================================ */
+
+/* --- Reveal animation base state --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   0. LIGHT HEADER VARIANT (About page)
+   ============================================ */
+.site-header--light .site-header__logo-name {
+  color: var(--color-text);
+}
+
+.site-header--light .site-header__logo-tagline {
+  color: rgba(26, 26, 26, 0.5);
+}
+
+.site-header--light .site-header__nav a {
+  color: var(--color-text);
+}
+
+.site-header--light .site-header__nav a.active {
+  border-bottom-color: var(--color-accent);
+}
+
+.site-header--light .site-header__hamburger span {
+  background: var(--color-text);
+}
+
+/* ============================================
+   1. HERO
+   ============================================ */
+.about-hero {
+  padding-top: 120px;
+  padding-bottom: 0;
+  background: var(--color-cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero__layout {
+  display: grid;
+  grid-template-columns: 1fr 180px 40px 120px;
+  align-items: start;
+  gap: 0;
+  min-height: 420px;
+}
+
+.about-hero__content {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-right: 40px;
+}
+
+.about-hero__label {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: 24px;
+}
+
+.about-hero__headline {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 28px;
+}
+
+.about-hero__headline span {
+  display: block;
+}
+
+.about-hero__body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 440px;
+}
+
+/* Decorative italic text */
+.about-hero__decorative {
+  padding-top: 140px;
+  text-align: right;
+}
+
+.about-hero__italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-accent);
+}
+
+/* Vertical sidebar text */
+.about-hero__sidebar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.about-hero__sidebar-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-text);
+  opacity: 0.35;
+}
+
+/* Photo strip on far right of hero */
+.about-hero__photos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  min-height: 420px;
+}
+
+.about-hero__photo-item {
+  flex: 1;
+  min-height: 100px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.about-hero__photo-item:nth-child(1) {
+  background: #5C4033;
+  flex: 1.3;
+}
+
+.about-hero__photo-item:nth-child(2) {
+  background: #6B5B4F;
+  flex: 0.8;
+}
+
+.about-hero__photo-item:nth-child(3) {
+  background: #4A3A2E;
+  flex: 1;
+}
+
+/* ============================================
+   2. PHOTO COLLAGE
+   ============================================ */
+.photo-collage {
+  padding: 0;
+}
+
+.photo-collage__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1.3fr 1fr;
+  grid-template-rows: 220px 220px;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.photo-collage__item {
+  min-height: 100%;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Tall item spans 2 rows */
+.photo-collage__item--tall {
+  grid-row: span 2;
+}
+
+/* Wide item spans 2 columns */
+.photo-collage__item--wide {
+  grid-column: span 2;
+}
+
+/* Warm-toned placeholder colors */
+.photo-collage__item:nth-child(1) {
+  background: #5C4033;
+  color: #a08070;
+}
+
+.photo-collage__item:nth-child(2) {
+  background: #6B5B4F;
+  color: #a89888;
+}
+
+.photo-collage__item:nth-child(3) {
+  background: #7A6A5E;
+  color: #b0a090;
+}
+
+.photo-collage__item:nth-child(4) {
+  background: #4A3A2E;
+  color: #8a7a6a;
+}
+
+.photo-collage__item:nth-child(5) {
+  background: #8B7D6B;
+  color: #bdb0a0;
+}
+
+/* ============================================
+   3. THREE COLUMNS
+   ============================================ */
+.three-columns {
+  padding: 72px 0;
+}
+
+.three-columns__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.three-columns__heading {
+  margin-bottom: 20px;
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.three-columns__text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Topic cloud */
+.topic-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  align-items: baseline;
+}
+
+.topic-cloud__tag {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.topic-cloud__tag--xl {
+  font-size: 30px;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.topic-cloud__tag--lg {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.topic-cloud__tag--md {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+
+.topic-cloud__tag--sm {
+  font-size: 13px;
+  font-weight: 400;
+  color: #888;
+}
+
+/* ============================================
+   4. WHAT BECOMES POSSIBLE? BANNER
+   ============================================ */
+.possible-banner {
+  position: relative;
+  width: 100%;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.possible-banner__bg {
+  position: absolute;
+  inset: 0;
+  background: #2A2520;
+  background-image:
+    linear-gradient(135deg, rgba(0,0,0,0.3) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(60,50,40,0.4) 0%, transparent 60%);
+}
+
+.possible-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.possible-banner__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.possible-banner__text {
+  font-family: var(--font-serif);
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.possible-banner__question {
+  font-size: 130px;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ============================================
+   5. FOUNDER'S LETTER
+   ============================================ */
+.founder {
+  padding: 80px 0 100px;
+  background: #fff;
+}
+
+.founder__label {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: 40px;
+  font-size: 11px;
+}
+
+.founder__grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.founder__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #2A2520;
+  color: #6a6058;
+  border-radius: 2px;
+}
+
+.founder__text {
+  max-width: 600px;
+}
+
+.founder__heading {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.founder__body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.founder__body:last-of-type {
+  margin-bottom: 28px;
+}
+
+.founder__signature {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 26px;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.founder__title {
+  display: block;
+  color: #888;
+  font-size: 11px;
+}
+
+/* ============================================
+   6. CIVIC HOUSE
+   ============================================ */
+.civic-house {
+  padding: 80px 0 100px;
+}
+
+.civic-house__label {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+
+.civic-house__heading {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-bottom: 40px;
+}
+
+.civic-house__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.civic-house__description {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.civic-house__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.civic-house__stat {
+  padding: 12px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.civic-house__stat .caption {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-text);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.civic-house__stat p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.civic-house__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #A89070;
+  color: #d4c4b0;
+  border-radius: 2px;
+}
+
+/* Program cards grid */
+.civic-house__programs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.civic-house__program.card {
+  padding: 20px 16px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.civic-house__program .card__icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.civic-house__program .card__title {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.civic-house__program .card__text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* ============================================
+   RESPONSIVE — 1280px
+   ============================================ */
+@media (max-width: 1280px) {
+  .about-hero__headline {
+    font-size: 56px;
+  }
+
+  .about-hero__layout {
+    grid-template-columns: 1fr 160px 36px 100px;
+  }
+
+  .possible-banner__text {
+    font-size: 80px;
+  }
+
+  .possible-banner__question {
+    font-size: 105px;
+  }
+
+  .civic-house__programs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   RESPONSIVE — 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+  .about-hero__headline {
+    font-size: 48px;
+  }
+
+  .about-hero__layout {
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+  }
+
+  .about-hero__sidebar,
+  .about-hero__photos {
+    display: none;
+  }
+
+  .about-hero__decorative {
+    padding-top: 40px;
+  }
+
+  .three-columns__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .three-columns__col--topics {
+    grid-column: 1 / -1;
+  }
+
+  .founder__grid {
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+  }
+
+  .possible-banner__text {
+    font-size: 64px;
+  }
+
+  .possible-banner__question {
+    font-size: 84px;
+  }
+
+  .civic-house__heading {
+    font-size: 38px;
+  }
+
+  .civic-house__stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — 768px (Tablet)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Revert header to normal (dark bg) on mobile nav */
+  .site-header--light .site-header__logo-name,
+  .site-header--light .site-header__nav a {
+    color: var(--color-text-light);
+  }
+
+  .site-header--light .site-header__logo-tagline {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .site-header--light .site-header__hamburger span {
+    background: var(--color-text);
+  }
+
+  .about-hero {
+    padding-top: 100px;
+    padding-bottom: 48px;
+  }
+
+  .about-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-hero__content {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .about-hero__headline {
+    font-size: 40px;
+  }
+
+  .about-hero__decorative {
+    padding-top: 0;
+  }
+
+  .about-hero__body {
+    max-width: 100%;
+  }
+
+  /* Collage stacks to 2 columns */
+  .photo-collage__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px 180px 180px;
+  }
+
+  .photo-collage__item--tall {
+    grid-row: span 2;
+  }
+
+  .photo-collage__item--wide {
+    grid-column: span 1;
+  }
+
+  /* Three columns stack */
+  .three-columns__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Possible banner */
+  .possible-banner {
+    min-height: 45vh;
+  }
+
+  .possible-banner__text {
+    font-size: 48px;
+  }
+
+  .possible-banner__question {
+    font-size: 64px;
+  }
+
+  /* Founder */
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .founder__photo {
+    max-width: 320px;
+  }
+
+  .founder__text {
+    max-width: 100%;
+  }
+
+  .founder__heading {
+    font-size: 32px;
+  }
+
+  /* Civic house */
+  .civic-house__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .civic-house__heading {
+    font-size: 32px;
+  }
+
+  .civic-house__stats {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .civic-house__programs {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — 375px (Mobile)
+   ============================================ */
+@media (max-width: 480px) {
+  .about-hero {
+    padding-top: 85px;
+    padding-bottom: 40px;
+  }
+
+  .about-hero__headline {
+    font-size: 32px;
+  }
+
+  .about-hero__italic {
+    font-size: 17px;
+  }
+
+  .about-hero__decorative {
+    display: none;
+  }
+
+  /* Collage single column */
+  .photo-collage__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 6px;
+  }
+
+  .photo-collage__item {
+    min-height: 170px;
+  }
+
+  .photo-collage__item--tall {
+    grid-row: span 1;
+  }
+
+  .photo-collage__item--wide {
+    grid-column: span 1;
+  }
+
+  /* Banner */
+  .possible-banner {
+    min-height: 35vh;
+  }
+
+  .possible-banner__text {
+    font-size: 36px;
+  }
+
+  .possible-banner__question {
+    font-size: 48px;
+  }
+
+  .possible-banner__content {
+    padding: 40px 20px;
+  }
+
+  /* Founder */
+  .founder {
+    padding: 60px 0;
+  }
+
+  .founder__photo {
+    max-width: 100%;
+  }
+
+  .founder__heading {
+    font-size: 28px;
+  }
+
+  .founder__signature {
+    font-size: 22px;
+  }
+
+  /* Civic house */
+  .civic-house {
+    padding: 60px 0;
+  }
+
+  .civic-house__heading {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+  .civic-house__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .civic-house__programs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Topic cloud */
+  .topic-cloud__tag--xl {
+    font-size: 24px;
+  }
+
+  .topic-cloud__tag--lg {
+    font-size: 17px;
+  }
+}

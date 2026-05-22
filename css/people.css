@@ -1,0 +1,702 @@
+/* ============================================
+   BlaQue Community Cares — People & Partners
+   ============================================ */
+
+/* --- Reveal animation base state --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   1. UNIFIED HERO SECTION
+   ============================================ */
+.people-hero {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  background: var(--color-cream);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Single 4-column grid for entire section */
+.people-hero__grid {
+  display: grid;
+  grid-template-columns: 300px 1fr 260px 72px;
+  gap: 0 28px;
+  align-items: start;
+}
+
+/* --- COL 1: Hero text --- */
+.people-hero__content {
+  grid-column: 1;
+  grid-row: 1;
+  padding-top: 20px;
+  padding-right: 12px;
+}
+
+.people-hero__label {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: 24px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.people-hero__headline {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.people-hero__accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.people-hero__body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 280px;
+  margin-bottom: 28px;
+}
+
+/* Play icon link */
+.people-hero__links {
+  display: flex;
+  gap: 24px;
+}
+
+.people-hero__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text);
+  transition: opacity var(--transition-fast);
+}
+
+.people-hero__link:hover {
+  opacity: 0.7;
+}
+
+.people-hero__link-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.people-hero__link-icon svg {
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+}
+
+.people-hero__link-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.people-hero__link-text .caption {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+/* --- COL 2: Photo grid column --- */
+.people-hero__col-grid {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* --- COL 3: Sidebar column --- */
+.people-hero__col-sidebar {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* --- COL 4: Photo strip --- */
+.people-hero__photo-strip {
+  grid-column: 4;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.people-hero__strip-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  border-radius: 1px;
+}
+
+/* Column labels (top of col 2 and col 3) */
+.people-hero__col-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.people-hero__col-label--dark {
+  color: var(--color-text);
+}
+
+/* Photo grid — 6 columns */
+.community-directory__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+
+.community-directory__photo {
+  aspect-ratio: 1;
+  border-radius: 1px;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.community-directory__photo span {
+  font-size: 0;
+}
+
+/* Volunteer list */
+.community-directory__vol-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.community-directory__vol-list li {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: #555;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.community-directory__vol-list li:last-child {
+  border-bottom: none;
+}
+
+
+/* ============================================
+   WANT IN? (integrated into sidebar col 3)
+   ============================================ */
+.want-in {
+  padding: 0;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.want-in__headline {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.want-in__body {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.want-in__body em {
+  color: var(--color-text);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.want-in__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.want-in__list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.want-in__list-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.want-in__list-item .caption {
+  color: var(--color-text);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.want-in__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 2px;
+  margin-top: 0;
+}
+
+
+/* ============================================
+   4. BOARD, STAFF & PARTNERS DIRECTORY
+   ============================================ */
+.org-directory {
+  padding: 60px 0 80px;
+  border-top: 1px solid var(--color-border);
+}
+
+.org-directory__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.org-directory__heading {
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.org-directory__list {
+  list-style: none;
+}
+
+.org-directory__person {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  line-height: 1.4;
+}
+
+.org-directory__person:last-child {
+  border-bottom: none;
+}
+
+.org-directory__name {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.org-directory__role {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.org-directory__person--tbd .org-directory__name {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Partner logos (text placeholders) */
+.org-directory__list--partners {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.org-directory__partner {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.org-directory__partner:last-child {
+  border-bottom: none;
+}
+
+.org-directory__partner-logo {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+
+/* ============================================
+   5. QUOTE / CTA SECTION
+   ============================================ */
+.people-quote {
+  display: block;
+}
+
+.people-quote__layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 50vh;
+}
+
+.people-quote__photo-side {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px 48px;
+}
+
+.people-quote__photo-bg {
+  position: absolute;
+  inset: 0;
+  background: #2A2520;
+  background: linear-gradient(
+    135deg,
+    #2A2520 0%,
+    #3E3020 40%,
+    #2A2520 100%
+  );
+}
+
+.people-quote__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.people-quote__text {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.people-quote__text p {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #fff;
+  font-style: italic;
+}
+
+.people-quote__text em {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.people-quote__message-side {
+  background: var(--color-bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 48px;
+}
+
+.people-quote__message {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 380px;
+}
+
+.people-quote__message strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* ============================================
+   FOOTER EXTRAS
+   ============================================ */
+.site-footer__description {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 320px;
+  margin-top: 16px;
+}
+
+.site-footer__credit {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.site-footer__logo-img {
+  height: 40px;
+  width: auto;
+}
+
+
+/* ============================================
+   RESPONSIVE — 1280px
+   ============================================ */
+@media (max-width: 1280px) {
+  .people-hero__grid {
+    grid-template-columns: 260px 1fr 220px 64px;
+    gap: 0 20px;
+  }
+
+  .people-hero__headline {
+    font-size: 38px;
+  }
+
+  .community-directory__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .want-in__headline {
+    font-size: 32px;
+  }
+
+  .org-directory__grid {
+    gap: 30px;
+  }
+
+  .org-directory__name {
+    font-size: 12px;
+  }
+
+  .org-directory__role {
+    font-size: 11px;
+  }
+
+  .people-quote__text p {
+    font-size: 22px;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE — 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+  .people-hero__grid {
+    grid-template-columns: 240px 1fr 200px;
+    gap: 0 20px;
+  }
+
+  .people-hero__headline {
+    font-size: 34px;
+  }
+
+  .people-hero__photo-strip {
+    display: none;
+  }
+
+  .community-directory__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .want-in__headline {
+    font-size: 28px;
+  }
+
+  .want-in__body {
+    font-size: 14px;
+  }
+
+  .org-directory__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 48px;
+  }
+
+  .people-quote__text p {
+    font-size: 22px;
+  }
+
+  .people-quote__message {
+    font-size: 14px;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE — 768px (Tablet)
+   ============================================ */
+@media (max-width: 768px) {
+  .people-hero {
+    padding-top: 90px;
+    padding-bottom: 32px;
+  }
+
+  .people-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 24px 0;
+  }
+
+  .people-hero__content {
+    padding-right: 0;
+  }
+
+  .people-hero__headline {
+    font-size: 34px;
+  }
+
+  .people-hero__body {
+    max-width: 100%;
+  }
+
+  .people-hero__photo-strip {
+    display: none;
+  }
+
+  .people-hero__col-grid,
+  .people-hero__col-sidebar {
+    grid-column: 1;
+  }
+
+  .community-directory__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .community-directory__vol-list {
+    margin-bottom: 24px;
+  }
+
+  .want-in__headline {
+    font-size: 32px;
+  }
+
+  /* Org directory */
+  .org-directory {
+    padding: 48px 0 60px;
+  }
+
+  .org-directory__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  /* Quote section */
+  .people-quote__layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .people-quote__photo-side {
+    padding: 48px 24px;
+    min-height: 40vh;
+  }
+
+  .people-quote__text p {
+    font-size: 22px;
+  }
+
+  .people-quote__message-side {
+    padding: 48px 24px;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE — 480px / 375px (Mobile)
+   ============================================ */
+@media (max-width: 480px) {
+  .people-hero {
+    padding-top: 80px;
+  }
+
+  .people-hero__headline {
+    font-size: 28px;
+  }
+
+  .people-hero__link-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .people-hero__link-text .caption {
+    font-size: 9px;
+  }
+
+  .community-directory__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+
+  .want-in__headline {
+    font-size: 26px;
+  }
+
+  .want-in__body {
+    font-size: 14px;
+  }
+
+  .want-in__list-item .caption {
+    font-size: 10px;
+  }
+
+  /* Org directory */
+  .org-directory__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .org-directory__name {
+    font-size: 12px;
+  }
+
+  .org-directory__role {
+    font-size: 11px;
+  }
+
+  /* Quote */
+  .people-quote__photo-side {
+    padding: 40px 20px;
+    min-height: 35vh;
+  }
+
+  .people-quote__text p {
+    font-size: 20px;
+  }
+
+  .people-quote__message-side {
+    padding: 40px 20px;
+  }
+
+  .people-quote__message {
+    font-size: 14px;
+  }
+}

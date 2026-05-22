@@ -1,0 +1,785 @@
+/* ============================================
+   BlaQue Community Cares — Homepage Styles
+   ============================================ */
+
+/* --- Reveal Animation --- */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.will-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   1. HERO SECTION
+   ======================================== */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: #4A3728;
+  /* Warm-toned placeholder for historical Queens street photo */
+  background: linear-gradient(
+    135deg,
+    #4A3728 0%,
+    #5C4A3A 30%,
+    #3E3020 60%,
+    #4A3728 100%
+  );
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 55%;
+  padding: 0 40px 80px 60px;
+  color: var(--color-text-light);
+}
+
+.hero__headline {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.hero__headline em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero__pills {
+  margin-bottom: 20px;
+}
+
+.hero__pills .pill-tag {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero__location {
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+/* ========================================
+   2. MISSION STATEMENT
+   ======================================== */
+.mission {
+  padding: 80px 0 60px;
+}
+
+.mission__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.mission__label {
+  display: inline-block;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.mission__text {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--color-text);
+  max-width: 560px;
+}
+
+.mission__action {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-top: 24px;
+  transition: opacity var(--transition-fast);
+}
+
+.mission__action:hover {
+  opacity: 0.75;
+}
+
+.mission__aside {
+  padding-top: 40px;
+}
+
+.mission__aside-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.mission__photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.mission__photo {
+  height: 140px;
+  border-radius: 2px;
+}
+
+/* ========================================
+   3. BANNER + COMMUNITY VALUE (combined)
+   ======================================== */
+.banner-value {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+}
+
+.banner-value__banner {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-height: 60vh;
+}
+
+.queens-banner__bg {
+  position: absolute;
+  inset: 0;
+  background: #2A2520;
+  background: linear-gradient(
+    180deg,
+    #2A2520 0%,
+    #3A3228 40%,
+    #2A2520 100%
+  );
+}
+
+.banner-value__banner-text {
+  position: relative;
+  z-index: 2;
+  padding: 50px 50px;
+}
+
+.queens-banner__text {
+  font-family: var(--font-serif);
+  font-size: 110px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 0.90;
+  text-align: left;
+}
+
+.banner-value__content {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  justify-content: flex-start;
+}
+
+.banner-value__top {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  flex: 0 0 auto;
+}
+
+.banner-value__top-text {
+  padding: 50px 40px 40px;
+}
+
+.banner-value__top-photo {
+  position: relative;
+}
+
+.banner-value__top-photo .community-value__photo {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  border-radius: 0;
+}
+
+.community-value__headline {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.banner-value__bottom {
+  flex: 0 0 auto;
+}
+
+.banner-value__info {
+  padding: 0 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.community-value__commitment {
+  margin-bottom: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.community-value__commitment .caption {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+.community-value__commitment p {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+.community-value__link {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  transition: opacity var(--transition-fast);
+}
+
+.community-value__link:hover {
+  opacity: 0.75;
+}
+
+.community-value__photo {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  border-radius: 0;
+}
+
+/* ========================================
+   4. HISTORICAL / COMMUNITY SECTION
+   ======================================== */
+.history-section {
+  padding: 60px 0;
+}
+
+.history__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  min-height: 500px;
+}
+
+.history__photo--st-albans {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.history__photo--community {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.history__photo--historic {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+.history__photo-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.history__photo-block .img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #6a6058;
+  background: #3A3228;
+}
+
+.history__quote-block {
+  grid-column: 1;
+  grid-row: 2;
+  background: #2D5C4A;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 2px;
+}
+
+.history__quote-text {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.history__quote-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.history__quote-meta .caption {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+}
+
+.history__quote-credit {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========================================
+   5. CATEGORY CARDS
+   ======================================== */
+.cards-section {
+  padding: 80px 0;
+}
+
+.cards__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cards__grid .card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 32px 28px;
+  border-radius: 2px;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.cards__grid .card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.cards__grid .card__icon {
+  margin-bottom: 20px;
+}
+
+.cards__grid .card__title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--color-text);
+}
+
+.cards__grid .card__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #666;
+}
+
+/* ========================================
+   6. FOOTER CTA
+   ======================================== */
+.footer-cta {
+  padding: 100px 40px 80px;
+}
+
+.footer-cta h2 {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.footer-cta__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-cta__logo .site-header__logo {
+  display: inline-flex;
+}
+
+/* ========================================
+   FOOTER LOGO IMAGE
+   ======================================== */
+.site-footer__logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* ========================================
+   RESPONSIVE: 1280px
+   ======================================== */
+@media (max-width: 1280px) {
+  .hero__headline {
+    font-size: 48px;
+  }
+
+  .queens-banner__text {
+    font-size: 72px;
+  }
+
+  .community-value__headline {
+    font-size: 28px;
+  }
+
+  .cards__grid {
+    gap: 16px;
+  }
+
+  .cards__grid .card {
+    padding: 28px 24px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: 1024px
+   ======================================== */
+@media (max-width: 1024px) {
+  .hero__content {
+    max-width: 70%;
+    padding: 0 24px 60px 40px;
+  }
+
+  .hero__headline {
+    font-size: 42px;
+  }
+
+  .mission__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mission__aside {
+    padding-top: 0;
+  }
+
+  .mission__photos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .banner-value {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .banner-value__banner {
+    min-height: 45vh;
+  }
+
+  .queens-banner__text {
+    font-size: 56px;
+    text-align: center;
+  }
+
+  .banner-value__banner-text {
+    padding: 40px 24px;
+  }
+
+  .banner-value__top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .banner-value__top-text {
+    padding: 40px 24px 30px;
+  }
+
+  .banner-value__info {
+    padding: 0 24px 30px;
+  }
+
+  .community-value__photo {
+    min-height: 200px;
+  }
+
+  .history__grid {
+    grid-template-columns: 1fr 1fr;
+    min-height: 400px;
+  }
+
+  .history__photo--st-albans {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .history__quote-block {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .history__photo--community {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .history__photo--historic {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .cards__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: 768px (Tablet)
+   ======================================== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 75vh;
+    align-items: flex-end;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    padding: 0 20px 50px 20px;
+  }
+
+  .hero__headline {
+    font-size: 34px;
+    margin-bottom: 24px;
+  }
+
+  .hero__pills {
+    margin-bottom: 16px;
+  }
+
+  .hero__location {
+    position: static;
+    margin-top: 16px;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .mission {
+    padding: 60px 0 40px;
+  }
+
+  .mission__text {
+    font-size: 20px;
+  }
+
+  .mission__photos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .mission__photo {
+    height: 120px;
+  }
+
+  .banner-value__banner {
+    min-height: 40vh;
+  }
+
+  .queens-banner__text {
+    font-size: 40px;
+  }
+
+  .banner-value__top {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-value__top-text {
+    padding: 30px 20px 20px;
+  }
+
+  .community-value__headline {
+    font-size: 26px;
+  }
+
+  .community-value__photo {
+    min-height: 200px;
+  }
+
+  .history__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: auto;
+  }
+
+  .history__photo--st-albans,
+  .history__photo--community,
+  .history__photo--historic,
+  .history__quote-block {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .history__photo-block .img-placeholder {
+    height: 200px !important;
+  }
+
+  .history__quote-block {
+    padding: 28px;
+  }
+
+  .history__quote-text {
+    font-size: 20px;
+  }
+
+  .cards__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cards__grid .card {
+    padding: 24px 20px;
+  }
+
+  .footer-cta {
+    padding: 60px 20px;
+  }
+
+  .footer-cta h2 {
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: 480px / 375px (Mobile)
+   ======================================== */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero__content {
+    padding: 0 16px 40px 16px;
+  }
+
+  .hero__headline {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .hero__pills .pill-tag {
+    font-size: 10px;
+  }
+
+  .hero__location {
+    font-size: 10px;
+  }
+
+  .mission {
+    padding: 40px 0 30px;
+  }
+
+  .mission__grid {
+    gap: 20px;
+  }
+
+  .mission__text {
+    font-size: 18px;
+  }
+
+  .mission__photos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mission__photo {
+    height: 100px;
+  }
+
+  .banner-value__banner {
+    min-height: 30vh;
+  }
+
+  .queens-banner__text {
+    font-size: 30px;
+  }
+
+  .banner-value__top-text {
+    padding: 30px 16px 20px;
+  }
+
+  .banner-value__info {
+    padding: 0 16px 24px;
+  }
+
+  .community-value__headline {
+    font-size: 22px;
+  }
+
+  .community-value__commitment p {
+    font-size: 16px;
+  }
+
+  .community-value__photo {
+    min-height: 160px;
+  }
+
+  .history__photo-block .img-placeholder {
+    height: 160px !important;
+  }
+
+  .history__quote-text {
+    font-size: 18px;
+  }
+
+  .cards-section {
+    padding: 50px 0;
+  }
+
+  .footer-cta {
+    padding: 50px 16px;
+  }
+
+  .footer-cta h2 {
+    font-size: 24px;
+  }
+}
