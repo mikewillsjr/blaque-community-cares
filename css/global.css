@@ -561,8 +561,9 @@ h4, .h4 {
   }
 
   .site-footer__columns {
-    flex-direction: column;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
   }
 
   .site-footer__bottom {
