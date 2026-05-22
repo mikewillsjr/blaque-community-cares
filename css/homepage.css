@@ -2,21 +2,10 @@
    BlaQue Community Cares — Homepage Styles
    ============================================ */
 
-/* --- Reveal Animation --- */
+/* --- Reveal Animation (disabled for brutalist feel) --- */
 .reveal {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.reveal.will-animate {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* ========================================
@@ -24,7 +13,7 @@
    ======================================== */
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 55vh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -45,9 +34,9 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.35) 60%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.35) 100%
   );
   z-index: 1;
 }
@@ -55,18 +44,18 @@
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 55%;
-  padding: 0 40px 80px 60px;
+  max-width: 50%;
+  padding: 0 0 36px 40px;
   color: var(--color-text-light);
 }
 
 .hero__headline {
   font-family: var(--font-serif);
-  font-size: 56px;
+  font-size: 60px;
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.05;
   letter-spacing: -0.02em;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   color: #fff;
 }
 
@@ -97,15 +86,15 @@
    2. MISSION STATEMENT
    ======================================== */
 .mission {
-  padding: 80px 0 60px;
+  padding: 50px 0 40px;
 }
 
 .mission__grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 40px;
   align-items: start;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
 }
 
 .mission__label {
@@ -118,8 +107,8 @@
 
 .mission__text {
   font-family: var(--font-serif);
-  font-size: 22px;
-  line-height: 1.6;
+  font-size: 25px;
+  line-height: 1.5;
   color: var(--color-text);
   max-width: 560px;
 }
@@ -138,24 +127,24 @@
 }
 
 .mission__aside {
-  padding-top: 40px;
+  padding-top: 6px;
 }
 
 .mission__aside-text {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.55;
   color: #555;
 }
 
 .mission__photos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  grid-template-columns: 1.1fr 0.9fr 1.05fr 0.95fr;
+  gap: 4px;
 }
 
 .mission__photo {
   height: 140px;
-  border-radius: 2px;
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -201,12 +190,12 @@
 
 .queens-banner__text {
   font-family: var(--font-serif);
-  font-size: 110px;
+  font-size: 130px;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: 0.02em;
-  line-height: 0.90;
+  letter-spacing: -0.01em;
+  line-height: 0.85;
   text-align: left;
 }
 
@@ -240,7 +229,7 @@
 
 .community-value__headline {
   font-family: var(--font-serif);
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -309,14 +298,14 @@
    4. HISTORICAL / COMMUNITY SECTION
    ======================================== */
 .history-section {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .history__grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1.3fr 0.9fr 1.1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 12px;
+  gap: 4px;
   min-height: 500px;
 }
 
@@ -338,7 +327,7 @@
 .history__photo-block {
   position: relative;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .history__photo-block .img-placeholder {
@@ -361,11 +350,11 @@
   grid-column: 1;
   grid-row: 2;
   background: #2D5C4A;
-  padding: 32px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .history__quote-text {
@@ -398,30 +387,36 @@
    5. CATEGORY CARDS
    ======================================== */
 .cards-section {
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 .cards__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 12px;
 }
 
 .cards__grid .card {
-  background: #fff;
-  border: 1px solid var(--color-border);
-  padding: 32px 28px;
-  border-radius: 2px;
-  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  background: transparent;
+  border: none;
+  border-top: 2px solid var(--color-primary);
+  padding: 20px 16px;
+  border-radius: 0;
 }
 
 .cards__grid .card:hover {
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
+  box-shadow: none;
+  transform: none;
 }
 
-.cards__grid .card__icon {
-  margin-bottom: 20px;
+.card__number {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+  display: block;
+  line-height: 1;
 }
 
 .cards__grid .card__title {
@@ -434,8 +429,8 @@
 }
 
 .cards__grid .card__text {
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.6;
   color: #666;
 }
 
@@ -443,7 +438,8 @@
    6. FOOTER CTA
    ======================================== */
 .footer-cta {
-  padding: 100px 40px 80px;
+  padding: 60px 40px 50px;
+  text-align: left;
 }
 
 .footer-cta h2 {
@@ -452,13 +448,13 @@
   font-weight: 400;
   line-height: 1.2;
   color: #fff;
-  max-width: 700px;
-  margin: 0 auto 40px;
+  max-width: none;
+  margin: 0 0 30px;
 }
 
 .footer-cta__logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-cta__logo .site-header__logo {
@@ -482,19 +478,19 @@
   }
 
   .queens-banner__text {
-    font-size: 72px;
+    font-size: 90px;
   }
 
   .community-value__headline {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .cards__grid {
-    gap: 16px;
+    gap: 10px;
   }
 
   .cards__grid .card {
-    padding: 28px 24px;
+    padding: 18px 14px;
   }
 }
 
