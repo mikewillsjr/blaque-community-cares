@@ -54,91 +54,17 @@
   transform: rotate(-13deg);
 }
 
+/* Hero collage — now a single designed image */
 .hero-collage {
-  position: relative;
-  min-height: 500px;
+  margin: 0;
 }
 
-.collage-card {
-  position: absolute;
-  overflow: hidden;
-  background: #d8c7b2;
-  box-shadow: 0 0 0 5px var(--paper), 0 12px 18px rgba(17, 16, 14, 0.08);
+.hero-collage img {
+  width: 100%;
+  height: auto;
 }
 
-.collage-card img {
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(0.92) contrast(1.08);
-}
-
-.collage-card--market {
-  top: 0;
-  left: 2%;
-  width: 47%;
-  height: 265px;
-  transform: rotate(-1.2deg);
-}
-
-.collage-card--meeting {
-  top: 0;
-  right: 0;
-  width: 42%;
-  height: 210px;
-  transform: rotate(0.6deg);
-}
-
-.collage-card--portrait {
-  left: 7%;
-  bottom: 2px;
-  width: 28%;
-  height: 235px;
-  transform: rotate(1.7deg);
-  filter: grayscale(1);
-}
-
-.collage-card--steps {
-  right: 27%;
-  bottom: 0;
-  width: 43%;
-  height: 270px;
-  transform: rotate(-0.8deg);
-}
-
-.map-tile {
-  position: absolute;
-  right: 0;
-  bottom: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 24%;
-  height: 270px;
-  padding: 0 0 64px 42px;
-  color: var(--ink);
-  background:
-    linear-gradient(35deg, transparent 18px, rgba(17, 16, 14, 0.05) 19px, transparent 20px) 0 0 / 44px 44px,
-    linear-gradient(145deg, transparent 22px, rgba(17, 16, 14, 0.05) 23px, transparent 24px) 0 0 / 55px 55px,
-    #f2eadf;
-  box-shadow: 0 0 0 5px var(--paper);
-  transform: rotate(1.4deg);
-}
-
-.map-tile span {
-  font-family: var(--font-serif);
-  font-size: 34px;
-  line-height: 1;
-}
-
-.map-tile strong {
-  font-family: var(--font-sans);
-  font-size: 17px;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  line-height: 1.05;
-  text-transform: uppercase;
-}
-
+/* Mission band */
 .mission-band {
   display: grid;
   grid-template-columns: 1fr 1.08fr 2.45fr;
@@ -244,6 +170,7 @@
   font-size: 17px;
 }
 
+/* Possible banner */
 .possible-banner {
   padding: 36px 56px 18px;
   border-bottom: 1px solid var(--line);
@@ -262,6 +189,7 @@
   color: var(--orange);
 }
 
+/* Founder note */
 .founder-note {
   display: grid;
   grid-template-columns: minmax(320px, 44vw) 1fr;
@@ -297,9 +225,10 @@
 .founder-note img {
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 50% 20%;
 }
 
+/* Civic house */
 .civic-house {
   display: grid;
   grid-template-columns: 31vw 1fr;
@@ -322,148 +251,28 @@
   line-height: 1.55;
 }
 
+/* Tape note — now a single designed image */
 .tape-note {
-  position: relative;
-  display: grid;
-  grid-template-columns: 115px 116px;
-  gap: 15px;
-  align-items: center;
-  width: max-content;
   margin-top: 22px;
-  padding: 8px 10px 8px 5px;
-  background: rgba(226, 211, 190, 0.62);
-  transform: rotate(-4deg);
-}
-
-.tape-note::before,
-.tape-note::after {
-  content: "";
-  position: absolute;
-  width: 58px;
-  height: 19px;
-  background: rgba(190, 163, 126, 0.5);
-}
-
-.tape-note::before {
-  left: -18px;
-  top: -8px;
-  transform: rotate(-14deg);
-}
-
-.tape-note::after {
-  right: 22px;
-  bottom: -9px;
-  transform: rotate(8deg);
 }
 
 .tape-note img {
-  height: 78px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
 }
 
-.tape-note span {
-  font-family: var(--font-script);
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 0.95;
-}
-
+/* House board — now a single designed image */
 .house-board {
-  position: relative;
-  min-height: 335px;
-  padding-top: 8px;
-}
-
-.house-board figure {
-  position: absolute;
-  left: 7%;
-  right: 4%;
-  bottom: 34px;
-  height: 300px;
-  overflow: hidden;
+  margin: 0;
 }
 
 .house-board img {
-  height: 100%;
-  object-fit: cover;
-  object-position: center 48%;
-  filter: saturate(0.94) contrast(1.04);
+  width: 100%;
+  height: auto;
 }
 
-.house-board .script-note {
-  position: absolute;
-  z-index: 2;
-  font-size: 18px;
-}
-
-.note-memory {
-  left: 1%;
-  top: 0;
-}
-
-.note-media {
-  right: 12%;
-  top: 0;
-}
-
-.note-office {
-  left: 1%;
-  top: 118px;
-}
-
-.note-events {
-  right: 0;
-  top: 106px;
-}
-
-.note-memory::after,
-.note-media::after,
-.note-office::after,
-.note-events::after {
-  content: "";
-  position: absolute;
-  width: 47px;
-  height: 1px;
-  background: var(--muted);
-}
-
-.note-memory::after {
-  right: -54px;
-  top: 25px;
-  transform: rotate(17deg);
-}
-
-.note-media::after {
-  left: -52px;
-  top: 18px;
-  transform: rotate(-24deg);
-}
-
-.note-office::after {
-  right: -58px;
-  top: 33px;
-  transform: rotate(9deg);
-}
-
-.note-events::after {
-  left: -48px;
-  top: 24px;
-  transform: rotate(-18deg);
-}
-
-.house-labels {
-  position: absolute;
-  left: 9%;
-  right: 2%;
-  bottom: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  font-family: var(--font-script);
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 0.92;
-}
+/* ====== Responsive ====== */
 
 @media (max-width: 1100px) {
   .home-page {
@@ -510,30 +319,6 @@
     font-size: 58px;
   }
 
-  .hero-collage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    min-height: 0;
-  }
-
-  .collage-card,
-  .map-tile {
-    position: relative;
-    inset: auto;
-    width: auto;
-    height: 190px;
-  }
-
-  .map-tile {
-    padding: 80px 22px 22px;
-  }
-
-  .collage-card--portrait,
-  .collage-card--steps {
-    height: 235px;
-  }
-
   .mission-band article,
   .possible-banner,
   .founder-copy,
@@ -555,38 +340,14 @@
   .possible-banner h2 {
     font-size: 58px;
   }
-
-  .house-board {
-    min-height: 520px;
-  }
-
-  .house-board figure {
-    left: 0;
-    right: 0;
-    bottom: 105px;
-  }
-
-  .house-labels {
-    left: 0;
-    right: 0;
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 520px) {
-  .hero-collage {
-    grid-template-columns: 1fr;
-  }
-
   .hero-copy h1 {
     font-size: 50px;
   }
 
   .possible-banner h2 {
     font-size: 44px;
-  }
-
-  .tape-note {
-    grid-template-columns: 92px 98px;
   }
 }
