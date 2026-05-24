@@ -1,805 +1,592 @@
 /* ============================================
-   BlaQue Community Cares — Homepage Styles
+   Homepage - Reference 1
    ============================================ */
 
-/* --- Reveal Animation (disabled for brutalist feel) --- */
-.reveal {
-  opacity: 1;
-  transform: none;
+.home-page {
+  padding-right: 74px;
 }
 
-/* ========================================
-   1. HERO SECTION
-   ======================================== */
-.hero {
-  position: relative;
-  min-height: 55vh;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 0;
-}
-
-.hero__bg {
-  position: absolute;
-  inset: 0;
-  background: #4A3728;
-  background-image: url('../assets/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.05) 0%,
-    rgba(0, 0, 0, 0.15) 50%,
-    rgba(0, 0, 0, 0.35) 100%
-  );
-  z-index: 1;
-}
-
-.hero__content {
-  position: relative;
-  z-index: 2;
-  max-width: 50%;
-  padding: 0 0 36px 40px;
-  color: var(--color-text-light);
-}
-
-.hero__headline {
-  font-family: var(--font-serif);
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
-  color: #fff;
-}
-
-.hero__headline em {
-  font-style: italic;
-  font-weight: 400;
-}
-
-.hero__pills {
-  margin-bottom: 20px;
-}
-
-.hero__pills .pill-tag {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.hero__location {
-  position: absolute;
-  bottom: 80px;
-  right: 60px;
-  z-index: 2;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-}
-
-/* ========================================
-   2. MISSION STATEMENT
-   ======================================== */
-.mission {
-  padding: 50px 0 40px;
-}
-
-.mission__grid {
+.home-hero {
   display: grid;
-  grid-template-columns: 1.6fr 0.8fr;
-  gap: 40px;
-  align-items: start;
-  margin-bottom: 36px;
+  grid-template-columns: minmax(410px, 34vw) minmax(600px, 1fr);
+  gap: 46px;
+  min-height: 655px;
+  padding: 160px 96px 34px 56px;
+  border-bottom: 1px solid var(--line);
 }
 
-.mission__label {
-  display: inline-block;
-  color: var(--color-accent);
-  margin-bottom: 20px;
-  font-size: 12px;
-  letter-spacing: 0.12em;
+.hero-copy {
+  position: relative;
+  padding-top: 10px;
 }
 
-.mission__text {
-  font-family: var(--font-serif);
-  font-size: 25px;
-  line-height: 1.5;
-  color: var(--color-text);
-  max-width: 560px;
-}
-
-.mission__action {
-  display: inline-block;
-  color: var(--color-accent);
-  font-size: 12px;
-  letter-spacing: 0.1em;
+.hero-copy h1 {
+  max-width: 440px;
   margin-top: 24px;
-  transition: opacity var(--transition-fast);
+  font-family: var(--font-serif);
+  font-size: clamp(64px, 5.75vw, 86px);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.94;
 }
 
-.mission__action:hover {
-  opacity: 0.75;
+.hero-copy p:not(.section-kicker):not(.script-note) {
+  max-width: 335px;
+  font-size: 14px;
+  line-height: 1.85;
 }
 
-.mission__aside {
-  padding-top: 6px;
-}
-
-.mission__aside-text {
-  font-size: 13px;
-  line-height: 1.55;
-  color: #555;
-}
-
-.mission__photos {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr 1.05fr 0.95fr;
-  gap: 4px;
-}
-
-.mission__photo {
-  height: 140px;
-  border-radius: 0;
-  overflow: hidden;
-}
-
-.mission__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ========================================
-   3. BANNER + COMMUNITY VALUE (combined)
-   ======================================== */
-.banner-value {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 70vh;
-}
-
-.banner-value__banner {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  min-height: 60vh;
-}
-
-.queens-banner__bg {
+.script-note--hero {
   position: absolute;
-  inset: 0;
-  background: #2A2520;
-  background-image: url('../assets/images/banner-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  right: -32px;
+  bottom: 72px;
+  transform: rotate(-8deg);
 }
 
-.banner-value__banner-text {
+.script-note--hero::after {
+  content: "";
+  position: absolute;
+  left: 88px;
+  bottom: 13px;
+  width: 52px;
+  height: 1px;
+  background: var(--muted);
+  transform: rotate(-13deg);
+}
+
+.hero-collage {
   position: relative;
-  z-index: 2;
-  padding: 50px 50px;
-}
-
-.queens-banner__text {
-  font-family: var(--font-serif);
-  font-size: 130px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: -0.01em;
-  line-height: 0.85;
-  text-align: left;
-}
-
-.banner-value__content {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  justify-content: flex-start;
-}
-
-.banner-value__top {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  flex: 0 0 auto;
-}
-
-.banner-value__top-text {
-  padding: 50px 40px 40px;
-}
-
-.banner-value__top-photo {
-  position: relative;
-}
-
-.banner-value__top-photo .community-value__photo {
-  width: 100%;
-  height: 100%;
-  min-height: 240px;
-  border-radius: 0;
-}
-
-.community-value__headline {
-  font-family: var(--font-serif);
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: var(--color-text);
-}
-
-.banner-value__bottom {
-  flex: 0 0 auto;
-}
-
-.banner-value__info {
-  padding: 0 40px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.community-value__commitment {
-  margin-bottom: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border);
-}
-
-.community-value__commitment .caption {
-  display: block;
-  color: var(--color-accent);
-  margin-bottom: 10px;
-  font-size: 11px;
-}
-
-.community-value__commitment p {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  line-height: 1.4;
-  color: var(--color-text);
-  font-style: italic;
-}
-
-.community-value__link {
-  display: inline-block;
-  color: var(--color-accent);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  transition: opacity var(--transition-fast);
-}
-
-.community-value__link:hover {
-  opacity: 0.75;
-}
-
-.community-value__photo {
-  width: 100%;
-  height: 100%;
-  min-height: 200px;
-  border-radius: 0;
-}
-
-.community-value__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ========================================
-   4. HISTORICAL / COMMUNITY SECTION
-   ======================================== */
-.history-section {
-  padding: 30px 0;
-}
-
-.history__grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.9fr 1.1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 4px;
   min-height: 500px;
 }
 
-.history__photo--st-albans {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.history__photo--community {
-  grid-column: 2;
-  grid-row: 1 / 3;
-}
-
-.history__photo--historic {
-  grid-column: 3;
-  grid-row: 1 / 3;
-}
-
-.history__photo-block {
-  position: relative;
+.collage-card {
+  position: absolute;
   overflow: hidden;
-  border-radius: 0;
+  background: #d8c7b2;
+  box-shadow: 0 0 0 5px var(--paper), 0 12px 18px rgba(17, 16, 14, 0.08);
 }
 
-.history__photo-block .img-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: #6a6058;
-  background: #3A3228;
-}
-
-.history__photo-block img {
-  width: 100%;
+.collage-card img {
   height: 100%;
   object-fit: cover;
-  display: block;
+  filter: saturate(0.92) contrast(1.08);
 }
 
-.history__quote-block {
-  grid-column: 1;
-  grid-row: 2;
-  background: #2D5C4A;
-  padding: 28px;
+.collage-card--market {
+  top: 0;
+  left: 2%;
+  width: 47%;
+  height: 265px;
+  transform: rotate(-1.2deg);
+}
+
+.collage-card--meeting {
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 210px;
+  transform: rotate(0.6deg);
+}
+
+.collage-card--portrait {
+  left: 7%;
+  bottom: 2px;
+  width: 28%;
+  height: 235px;
+  transform: rotate(1.7deg);
+  filter: grayscale(1);
+}
+
+.collage-card--steps {
+  right: 27%;
+  bottom: 0;
+  width: 43%;
+  height: 270px;
+  transform: rotate(-0.8deg);
+}
+
+.map-tile {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 0;
+  width: 24%;
+  height: 270px;
+  padding: 0 0 64px 42px;
+  color: var(--ink);
+  background:
+    linear-gradient(35deg, transparent 18px, rgba(17, 16, 14, 0.05) 19px, transparent 20px) 0 0 / 44px 44px,
+    linear-gradient(145deg, transparent 22px, rgba(17, 16, 14, 0.05) 23px, transparent 24px) 0 0 / 55px 55px,
+    #f2eadf;
+  box-shadow: 0 0 0 5px var(--paper);
+  transform: rotate(1.4deg);
 }
 
-.history__quote-text {
+.map-tile span {
   font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1.35;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.history__quote-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.history__quote-meta .caption {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 10px;
-}
-
-.history__quote-credit {
-  font-family: var(--font-sans);
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* ========================================
-   5. CATEGORY CARDS
-   ======================================== */
-.cards-section {
-  padding: 50px 0;
-}
-
-.cards__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-.cards__grid .card {
-  background: transparent;
-  border: none;
-  border-top: 2px solid var(--color-primary);
-  padding: 20px 16px;
-  border-radius: 0;
-}
-
-.cards__grid .card:hover {
-  box-shadow: none;
-  transform: none;
-}
-
-.card__number {
-  font-family: var(--font-serif);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 14px;
-  display: block;
+  font-size: 34px;
   line-height: 1;
 }
 
-.cards__grid .card__title {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+.map-tile strong {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1.05;
   text-transform: uppercase;
-  margin-bottom: 14px;
-  color: var(--color-text);
 }
 
-.cards__grid .card__text {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #666;
+.mission-band {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr 2.45fr;
+  border-bottom: 1px solid var(--line);
 }
 
-/* ========================================
-   6. FOOTER CTA
-   ======================================== */
-.footer-cta {
-  padding: 60px 40px 50px;
-  text-align: left;
+.mission-band article {
+  min-height: 265px;
+  padding: 34px 56px 28px;
+  border-right: 1px solid var(--line);
 }
 
-.footer-cta h2 {
+.mission-band article:last-child {
+  border-right: 0;
+}
+
+.mission-band p:not(.section-kicker) {
+  max-width: 295px;
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.topic-field {
+  padding-right: 72px;
+}
+
+.topics {
+  position: relative;
+  min-height: 170px;
+}
+
+.topics > * {
+  position: absolute;
+}
+
+.topics strong {
+  left: 0;
+  top: 10px;
   font-family: var(--font-serif);
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 1.2;
-  color: #fff;
-  max-width: none;
-  margin: 0 0 30px;
+  font-size: 43px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
 }
 
-.footer-cta__logo {
-  display: flex;
-  justify-content: flex-start;
+.topics span {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  line-height: 1.03;
 }
 
-.footer-cta__logo .site-header__logo {
-  display: inline-flex;
+.topics span:nth-child(2) {
+  left: 43%;
+  top: 12px;
 }
 
-/* ========================================
-   FOOTER LOGO IMAGE
-   ======================================== */
-.site-footer__logo-img {
-  height: 40px;
-  width: auto;
+.topics span:nth-child(3) {
+  right: 2%;
+  top: 36px;
 }
 
-/* ========================================
-   RESPONSIVE: 1280px
-   ======================================== */
-@media (max-width: 1280px) {
-  .hero__headline {
-    font-size: 48px;
-  }
-
-  .queens-banner__text {
-    font-size: 90px;
-  }
-
-  .community-value__headline {
-    font-size: 24px;
-  }
-
-  .cards__grid {
-    gap: 10px;
-  }
-
-  .cards__grid .card {
-    padding: 18px 14px;
-  }
+.topics span:nth-child(4) {
+  left: 33%;
+  top: 95px;
+  transform: rotate(-8deg);
 }
 
-/* ========================================
-   RESPONSIVE: 1024px
-   ======================================== */
-@media (max-width: 1024px) {
-  .hero__content {
-    max-width: 70%;
-    padding: 0 24px 60px 40px;
+.topics span:nth-child(4)::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  margin-left: 15px;
+  vertical-align: middle;
+  background: var(--orange);
+}
+
+.topics span:nth-child(5) {
+  left: 0;
+  bottom: 2px;
+}
+
+.topics span:nth-child(5)::after {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 1px;
+  margin-top: 8px;
+  background: var(--orange);
+  transform: rotate(-3deg);
+}
+
+.topics span:nth-child(6) {
+  right: 7%;
+  bottom: 30px;
+  padding-left: 18px;
+  border-left: 1px solid var(--orange);
+}
+
+.topics span:nth-child(7) {
+  left: 43%;
+  bottom: -3px;
+  font-size: 17px;
+}
+
+.possible-banner {
+  padding: 36px 56px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.possible-banner h2 {
+  font-family: var(--font-heavy);
+  font-size: clamp(72px, 9vw, 128px);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.possible-banner span {
+  color: var(--orange);
+}
+
+.founder-note {
+  display: grid;
+  grid-template-columns: minmax(320px, 44vw) 1fr;
+  min-height: 360px;
+  border-bottom: 1px solid var(--line);
+}
+
+.founder-copy {
+  padding: 34px 56px 26px;
+}
+
+.founder-copy h2 {
+  margin: 8px 0 12px;
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.founder-copy p:not(.section-kicker):not(.signature) {
+  max-width: 620px;
+  margin-bottom: 13px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.founder-note figure {
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.founder-note img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.civic-house {
+  display: grid;
+  grid-template-columns: 31vw 1fr;
+  gap: 24px;
+  padding: 34px 56px 22px;
+}
+
+.civic-copy h2 {
+  margin: 8px 0 14px;
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
+}
+
+.civic-copy > p:not(.section-kicker) {
+  max-width: 275px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.tape-note {
+  position: relative;
+  display: grid;
+  grid-template-columns: 115px 116px;
+  gap: 15px;
+  align-items: center;
+  width: max-content;
+  margin-top: 22px;
+  padding: 8px 10px 8px 5px;
+  background: rgba(226, 211, 190, 0.62);
+  transform: rotate(-4deg);
+}
+
+.tape-note::before,
+.tape-note::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 19px;
+  background: rgba(190, 163, 126, 0.5);
+}
+
+.tape-note::before {
+  left: -18px;
+  top: -8px;
+  transform: rotate(-14deg);
+}
+
+.tape-note::after {
+  right: 22px;
+  bottom: -9px;
+  transform: rotate(8deg);
+}
+
+.tape-note img {
+  height: 78px;
+  object-fit: cover;
+}
+
+.tape-note span {
+  font-family: var(--font-script);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.house-board {
+  position: relative;
+  min-height: 335px;
+  padding-top: 8px;
+}
+
+.house-board figure {
+  position: absolute;
+  left: 7%;
+  right: 4%;
+  bottom: 34px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.house-board img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  filter: saturate(0.94) contrast(1.04);
+}
+
+.house-board .script-note {
+  position: absolute;
+  z-index: 2;
+  font-size: 18px;
+}
+
+.note-memory {
+  left: 1%;
+  top: 0;
+}
+
+.note-media {
+  right: 12%;
+  top: 0;
+}
+
+.note-office {
+  left: 1%;
+  top: 118px;
+}
+
+.note-events {
+  right: 0;
+  top: 106px;
+}
+
+.note-memory::after,
+.note-media::after,
+.note-office::after,
+.note-events::after {
+  content: "";
+  position: absolute;
+  width: 47px;
+  height: 1px;
+  background: var(--muted);
+}
+
+.note-memory::after {
+  right: -54px;
+  top: 25px;
+  transform: rotate(17deg);
+}
+
+.note-media::after {
+  left: -52px;
+  top: 18px;
+  transform: rotate(-24deg);
+}
+
+.note-office::after {
+  right: -58px;
+  top: 33px;
+  transform: rotate(9deg);
+}
+
+.note-events::after {
+  left: -48px;
+  top: 24px;
+  transform: rotate(-18deg);
+}
+
+.house-labels {
+  position: absolute;
+  left: 9%;
+  right: 2%;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  font-family: var(--font-script);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 0.92;
+}
+
+@media (max-width: 1100px) {
+  .home-page {
+    padding-right: 0;
   }
 
-  .hero__headline {
-    font-size: 42px;
-  }
-
-  .mission__grid {
+  .home-hero {
     grid-template-columns: 1fr;
-    gap: 30px;
+    padding: 130px 28px 36px;
   }
 
-  .mission__aside {
-    padding-top: 0;
+  .hero-copy h1 {
+    max-width: none;
   }
 
-  .mission__photos {
-    grid-template-columns: repeat(4, 1fr);
+  .script-note--hero {
+    right: 20px;
+    bottom: 16px;
   }
 
-  .banner-value {
+  .mission-band,
+  .founder-note,
+  .civic-house {
     grid-template-columns: 1fr;
+  }
+
+  .mission-band article {
     min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
-  .banner-value__banner {
-    min-height: 45vh;
-  }
-
-  .queens-banner__text {
-    font-size: 56px;
-    text-align: center;
-  }
-
-  .banner-value__banner-text {
-    padding: 40px 24px;
-  }
-
-  .banner-value__top {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .banner-value__top-text {
-    padding: 40px 24px 30px;
-  }
-
-  .banner-value__info {
-    padding: 0 24px 30px;
-  }
-
-  .community-value__photo {
-    min-height: 200px;
-  }
-
-  .history__grid {
-    grid-template-columns: 1fr 1fr;
-    min-height: 400px;
-  }
-
-  .history__photo--st-albans {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .history__quote-block {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .history__photo--community {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .history__photo--historic {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .cards__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .civic-copy > p:not(.section-kicker) {
+    max-width: 560px;
   }
 }
 
-/* ========================================
-   RESPONSIVE: 768px (Tablet)
-   ======================================== */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 75vh;
-    align-items: flex-end;
+@media (max-width: 760px) {
+  .home-hero {
+    padding: 118px 18px 24px;
   }
 
-  .hero__content {
-    max-width: 100%;
-    padding: 0 20px 50px 20px;
+  .hero-copy h1 {
+    font-size: 58px;
   }
 
-  .hero__headline {
-    font-size: 34px;
-    margin-bottom: 24px;
+  .hero-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    min-height: 0;
   }
 
-  .hero__pills {
-    margin-bottom: 16px;
+  .collage-card,
+  .map-tile {
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: 190px;
   }
 
-  .hero__location {
+  .map-tile {
+    padding: 80px 22px 22px;
+  }
+
+  .collage-card--portrait,
+  .collage-card--steps {
+    height: 235px;
+  }
+
+  .mission-band article,
+  .possible-banner,
+  .founder-copy,
+  .civic-house {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .topics {
+    min-height: 340px;
+  }
+
+  .topics > * {
     position: static;
-    margin-top: 16px;
-    padding: 0 20px;
-    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin: 18px 0;
   }
 
-  .mission {
-    padding: 60px 0 40px;
+  .possible-banner h2 {
+    font-size: 58px;
   }
 
-  .mission__text {
-    font-size: 20px;
+  .house-board {
+    min-height: 520px;
   }
 
-  .mission__photos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  .house-board figure {
+    left: 0;
+    right: 0;
+    bottom: 105px;
   }
 
-  .mission__photo {
-    height: 120px;
-  }
-
-  .banner-value__banner {
-    min-height: 40vh;
-  }
-
-  .queens-banner__text {
-    font-size: 40px;
-  }
-
-  .banner-value__top {
-    grid-template-columns: 1fr;
-  }
-
-  .banner-value__top-text {
-    padding: 30px 20px 20px;
-  }
-
-  .community-value__headline {
-    font-size: 26px;
-  }
-
-  .community-value__photo {
-    min-height: 200px;
-  }
-
-  .history__grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    min-height: auto;
-  }
-
-  .history__photo--st-albans,
-  .history__photo--community,
-  .history__photo--historic,
-  .history__quote-block {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .history__photo-block .img-placeholder {
-    height: 200px !important;
-  }
-
-  .history__photo-block img {
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .history__quote-block {
-    padding: 28px;
-  }
-
-  .history__quote-text {
-    font-size: 20px;
-  }
-
-  .cards__grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .cards__grid .card {
-    padding: 24px 20px;
-  }
-
-  .footer-cta {
-    padding: 60px 20px;
-  }
-
-  .footer-cta h2 {
-    font-size: 28px;
+  .house-labels {
+    left: 0;
+    right: 0;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* ========================================
-   RESPONSIVE: 480px / 375px (Mobile)
-   ======================================== */
-@media (max-width: 480px) {
-  .hero {
-    min-height: 70vh;
+@media (max-width: 520px) {
+  .hero-collage {
+    grid-template-columns: 1fr;
   }
 
-  .hero__content {
-    padding: 0 16px 40px 16px;
+  .hero-copy h1 {
+    font-size: 50px;
   }
 
-  .hero__headline {
-    font-size: 28px;
-    margin-bottom: 20px;
+  .possible-banner h2 {
+    font-size: 44px;
   }
 
-  .hero__pills .pill-tag {
-    font-size: 10px;
-  }
-
-  .hero__location {
-    font-size: 10px;
-  }
-
-  .mission {
-    padding: 40px 0 30px;
-  }
-
-  .mission__grid {
-    gap: 20px;
-  }
-
-  .mission__text {
-    font-size: 18px;
-  }
-
-  .mission__photos {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .mission__photo {
-    height: 100px;
-  }
-
-  .banner-value__banner {
-    min-height: 30vh;
-  }
-
-  .queens-banner__text {
-    font-size: 30px;
-  }
-
-  .banner-value__top-text {
-    padding: 30px 16px 20px;
-  }
-
-  .banner-value__info {
-    padding: 0 16px 24px;
-  }
-
-  .community-value__headline {
-    font-size: 22px;
-  }
-
-  .community-value__commitment p {
-    font-size: 16px;
-  }
-
-  .community-value__photo {
-    min-height: 160px;
-  }
-
-  .history__photo-block .img-placeholder {
-    height: 160px !important;
-  }
-
-  .history__photo-block img {
-    height: 160px;
-    object-fit: cover;
-  }
-
-  .history__quote-text {
-    font-size: 18px;
-  }
-
-  .cards-section {
-    padding: 50px 0;
-  }
-
-  .footer-cta {
-    padding: 50px 16px;
-  }
-
-  .footer-cta h2 {
-    font-size: 24px;
+  .tape-note {
+    grid-template-columns: 92px 98px;
   }
 }
