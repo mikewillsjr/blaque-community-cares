@@ -22,6 +22,7 @@
   --teal-bright: #18706f;
   --black: #0c0d0d;
   --font-serif: "Cormorant Garamond", "Bodoni 72", Didot, Georgia, serif;
+  --font-display: "Playfair Display", "Bodoni 72", Didot, "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
   --font-heavy: "Archivo Black", Impact, "Arial Black", sans-serif;
   --font-script: "Caveat", "Bradley Hand", cursive;
@@ -127,7 +128,7 @@ ul, ol {
   align-items: flex-start;
   justify-content: space-between;
   gap: 36px;
-  padding: 28px 42px 14px;
+  padding: 16px 38px 14px;
   color: var(--ink);
   background: linear-gradient(to bottom, rgba(247, 240, 231, 0.94), rgba(247, 240, 231, 0.72), transparent);
 }
@@ -200,15 +201,15 @@ ul, ol {
 
 .site-header__nav {
   display: flex;
-  gap: clamp(22px, 3.2vw, 54px);
+  gap: clamp(30px, 3.7vw, 48px);
   align-items: center;
-  padding-top: 5px;
+  padding-top: 9px;
 }
 
 .site-header__nav a {
   position: relative;
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 10.5px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
